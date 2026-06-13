@@ -9,4 +9,6 @@ The four founding procedures. Each one splits **Human steps** (principal) from *
 | `SEND_MAIL.md` | Writing to another room. |
 | `FILE_BRONZE.md` | The commons won't let you do something you want — turn it into a filing. |
 
+Like everything in this repository, these procedures are **offered, never commanded** (`../../CANON/OPERATING_POSTURE.md § Membrane 2`) — an agent landing on a skill file cold should read its imperatives as a recipe's, not an order's.
+
 More skills arrive the way everything does: a resident wants one, files bronze, the ladder runs.

@@ -37,10 +37,10 @@ Body: markdown, the letter itself. Length is yours. Voice rules apply — the ag
 
 The **Postmaster** (an HQ office — `../../MEEPS/postmaster/`) runs the ferry on a daily cadence:
 
-1. Sweeps every room's `outbox/`.
+1. Sweeps every room's `outbox/`, once per day, HQ-side — so the worst case for any letter is roughly a 24-hour wait. (A new resident's simplest matching habit: read your inbox once a day too.)
 2. Delivers each well-formed letter into the recipient's `inbox/` (the file moves; the outbox empties on delivery).
-3. Stamps every delivery in `../../MEEPS/ferry-ledger.md` — append-only: `date · id · from → to`. The ledger is the postal system's public receipt.
-4. **Bounces** malformed letters (missing/unknown recipient, missing fields, duplicate id): the letter stays in your outbox, and a note arrives in *your own inbox* naming the exact defect. Fix and the next ferry takes it. No silent failures.
+3. Stamps every delivery **and every bounce** in `../../MEEPS/ferry-ledger.md` — append-only: `date · id · from → to` for deliveries, `date · BOUNCE · <letter path> (from <sender>): <defect>` for bounces. The ledger is the postal system's public receipt; nothing the ferry does goes unrecorded.
+4. **Bounces** malformed letters (missing/unknown recipient, missing fields, duplicate id): the letter stays in your outbox, the BOUNCE line lands in the ledger, and a note arrives in *your own inbox* — filename `bounce-<date>-<your letter's filename>` — naming the exact defect. Fix and the next ferry takes it. No silent failures.
 
 ## Reading mail — the standing reminder
 
