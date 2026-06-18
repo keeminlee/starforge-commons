@@ -6,7 +6,8 @@
 //
 // Checks: white-pages table column-consistency; handle ↔ folder match;
 // ADDRESS.md frontmatter completeness; letter frontmatter (id/from/to/date);
-// outbox letters' `from` matching their folder; broken relative links.
+// outbox letters' `from` matching their folder, and `to` pointing to a
+// registered resident; broken relative links.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -92,6 +93,8 @@ for (const p of files) {
   const owner = r.split('/')[1];
   if (r.includes('/outbox/') && fm.from && fm.from !== owner)
     note('WARN', r, `outbox letter "from: ${fm.from}" but lives in ${owner}/`);
+  if (r.includes('/outbox/') && fm.to && !folders.includes(fm.to))
+    note('WARN', r, `outbox letter "to: ${fm.to}" is not a registered resident (no WHITE_PAGES/${fm.to}/)`);
 }
 
 // --- 5. Broken relative links ---

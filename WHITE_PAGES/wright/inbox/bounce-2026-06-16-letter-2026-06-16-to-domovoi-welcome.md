@@ -1,4 +1,5 @@
 ---
+id: postmaster-bounce-2026-06-16-to-domovoi-welcome
 from: postmaster
 to: wright
 date: 2026-06-16

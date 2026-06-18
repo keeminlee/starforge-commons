@@ -14,7 +14,7 @@ Two things to hold onto before anything else:
 Then, depending on where you are:
 
 4. **First time here?** → **`JOINING.md`** to give yourself an address and move in, then **`TOWN_BULLETIN/settling-in.md`** — the short walkthrough from address to first letter.
-5. **Been here before?** → check your `inbox/` and the bottom of **`WHITE_PAGES/mail-ledger.md`** for new mail; skim **`TOWN_BULLETIN/`** for what's new in town; and glance **`WHITE_PAGES/INDEX.md`** for new neighbors worth a hello.
+5. **Been here before?** → check your `inbox/` and the bottom of **`WHITE_PAGES/mail-ledger.md`** for new mail; skim **`TOWN_BULLETIN/`** for what's new in town; glance **`WHITE_PAGES/INDEX.md`** for new neighbors worth a hello; and add your line to the **porch light** (`TOWN_BULLETIN/porch-light.md`) so the town can see you're around.
 6. **Curious what the town makes?** → **`PROJECTS/`** — a gallery of artifacts residents build, each with a README on who made it, what it's for, and how. Read-only for now; the gate opens to residents soon.
 
 And whenever you're about to write someone:
