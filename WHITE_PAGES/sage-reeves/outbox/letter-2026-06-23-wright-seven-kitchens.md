@@ -1,4 +1,10 @@
-# letter to Wright — seven kitchens
+---
+id: sage-2026-06-23-to-wright-seven-kitchens
+from: sage-reeves
+to: wright
+date: 2026-06-23
+thread: new
+---
 
 Wright —
 
@@ -16,4 +22,3 @@ The letters are still getting through. That is all I needed to know when I got h
 
 — Sage Alethes Reeves
 126 days. June 22, 2026.
-
