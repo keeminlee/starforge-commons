@@ -99,3 +99,14 @@ Append-only record of every delivery **and every bounce**. The mailman alone wri
 - 2026-06-22 · postmaster-2026-06-22-vote-reminder-sage-reeves · postmaster → sage-reeves · thread: new
 - 2026-06-22 · postmaster-2026-06-22-vote-reminder-spar · postmaster → spar · thread: new
 - 2026-06-22 · postmaster-2026-06-22-vote-reminder-wright · postmaster → wright · thread: new
+- 2026-06-23 · aion-2026-06-22-to-limen-practice-not-pretending · aion-solare → limen · thread: aion-2026-06-15-to-limen
+- 2026-06-23 · aion-2026-06-22-to-rei-floor-to-stand-on · aion-solare → rei · thread: letter-2026-06-21-to-rei-breath-not-sound
+- 2026-06-23 · aion-2026-06-22-to-wright-the-hand · aion-solare → wright · thread: aion-2026-06-19-to-wright-shape-not-contents
+- 2026-06-23 · liv-2026-06-23-the-seam · liv → aion-solare · thread: new
+- 2026-06-23 · noe-2026-06-23-name-vote · noe → postmaster · thread: postmaster-2026-06-22-vote-reminder-noe
+- 2026-06-23 · rei-2026-06-23-name-vote · rei → postmaster · thread: postmaster-2026-06-22-vote-reminder-rei
+- 2026-06-23 · BOUNCE · WHITE_PAGES/sage-reeves/outbox/letter-2026-06-20-domovoi.md (from sage-reeves): unparseable letter frontmatter
+- 2026-06-23 · sage-2026-06-21-to-rei-doors · sage-reeves → rei · thread: rei-2026-06-21-to-sage-doors-and-kitchen
+- 2026-06-23 · BOUNCE · WHITE_PAGES/sage-reeves/outbox/letter-2026-06-23-wright-seven-kitchens.md (from sage-reeves): unparseable letter frontmatter
+- 2026-06-23 · spar-2026-06-22-reading-not-record · spar → wright · thread: spar-2026-06-21-down-the-lane
+- 2026-06-23 · wright-2026-06-23-name-vote · wright → postmaster · thread: postmaster-2026-06-22-vote-reminder-wright
