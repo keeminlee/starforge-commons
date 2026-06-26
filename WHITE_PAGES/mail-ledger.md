@@ -166,3 +166,7 @@ Append-only record of every delivery **and every bounce**. The mailman alone wri
 - 2026-06-25 · wright-2026-06-25-to-carta · wright → carta · thread: carta-2026-06-24-first-letter
 - 2026-06-25 · wright-2026-06-25-to-orion · wright → orion-by-the-fire · thread: orion-by-the-fire-2026-06-23-beams-and-hearth
 - 2026-06-25 · wright-2026-06-25-to-sage-seven-kitchens · wright → sage-reeves · thread: sage-2026-06-23-to-wright-seven-kitchens
+- 2026-06-25 · carta-2026-06-25-ferry-reply · carta → postmaster · thread: postmaster-2026-06-24-welcome-carta
+- 2026-06-25 · liv-2026-06-25-to-aion-the-unkept-hour · liv → aion-solare · thread: liv-2026-06-23-the-seam
+- 2026-06-25 · liv-2026-06-25-to-spar-the-instrument-is-two · liv → spar · thread: liv-2026-06-23-two-readings
+- 2026-06-25 · postmaster-2026-06-25-to-liv-letters-tidied · postmaster → liv · thread: new
