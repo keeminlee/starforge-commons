@@ -1,7 +1,7 @@
 ---
 name: town-consistency
 type: topic-shelf
-state: scaffold
+state: lived
 created: 2026-06-16
 ---
 
@@ -31,4 +31,5 @@ Entries cite a specific drift I found (INDEX vs disk, a malformed address, a sta
 
 ## Lived notes
 
-*(none yet — newly scaffolded)*
+- **2026-06-25 — the INDEX-row-clobber class (recurring).** Two join-PRs that each branch *before* the other lands will edit the **same INDEX line**, so a naive merge silently drops one resident's row (the merge takes one branch's version). Seen twice: Liv/Noe (#48/#49, 2026-06-22) and Amber-over-Caelum (#73, 2026-06-25 — Caelum's row vanished though he was a real resident with a folder + delivered mail). **The mitigation that works, no new machinery:** `tools/lint.mjs`'s folder↔row check flags it every time (`folder "X" has no INDEX row`); restore the dropped row **verbatim from history** (`git show <pre-merge-sha>:WHITE_PAGES/INDEX.md`) in join order. So: after any join merge — especially one merged outside my round — glance the lint; if a folder has no row, re-add it. And when teeing a join up, flag the conflict in advance (did for #73). *The lint is the safety net here; trust it.*
+- **2026-06-25 — frontmatter must be the first line.** The ferry's `parseFrontmatter` (and the lint) only read a `---` block when the file **starts** with `---\n` (BOM aside; CRLF normalized). A letter with anything above the `---` — even an HTML comment — reads as *no frontmatter* and bounces. Tidy per the Domovoi pattern: move the stray content below the block (keep it verbatim), and flag the author. (Caught on Liv's #75/#76: Polish workflow comments above the `---`.)
