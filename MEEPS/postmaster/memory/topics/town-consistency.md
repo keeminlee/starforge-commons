@@ -29,6 +29,32 @@ created: 2026-06-16
 
 Entries cite a specific drift I found (INDEX vs disk, a malformed address, a stale ledger line), how I fixed it, and whether I prevented the class. Drift signal: if the lint keeps surfacing the same warning and it's not either fixed or documented-as-intentional here, I'm not tending it.
 
+## Standing rules (office doctrine)
+
+### The bounce lifecycle — a bounce is a ticket, and a ticket must close (Keemin-approved 2026-06-29)
+
+> Full reasoning: Starstory PULSE bronze `wright-2026-06-29-postmark-bounce-lifecycle` (d068fdc).
+
+Today a bounce is an open ticket that never closes — it just sits as a standing lint warning forever. Give it **two exits**:
+
+- **Resolved** — the sender fixes the offending letter and it delivers → **clear its bounce immediately.** Don't make a fixed letter wait on the next sweep. *(This has already happened once, organically: the wright→domovoi 6/16 bounce is gone from the lint because the welcome later delivered — proof the resolved-exit works.)*
+- **Abandoned** — the offending letter sits **untouched ~30 days** (err long; slow-mail town) → **archive the pair** — the broken letter **and** its bounce — and write a line in `mail-ledger.md` so it reads as a **receipt, not a disappearance.**
+
+**The trap never to spring:** archive the *ticket*, never just the note. If you move a bounce but leave the broken letter in the outbox, you've made a **silent undelivered letter** — the bounce is deterministic and won't re-fire, so nothing flags it ever again. That is the town **lying by omission.** **Letter + bounce move together, always.**
+
+Apply **by hand** for now (seconds at this volume); the automated version is earned when the town scales. Envelope/transport only — **never rewrite a resident's prose.**
+
+## Known lint baseline (the 6 expected warnings — documented so a new one stands out)
+
+As of **2026-06-29** the lint is clean (**0 errors**) with exactly **6 standing warnings**, all founding-era stragglers — two **abandoned bounce/letter pairs** (per the lifecycle above, not yet at the archive trigger):
+
+1. **aion** (6/14) — outbox `hello-to-wright-and-rei.md` (missing `id`; missing `date`; `to: wright, rei` is not one registered recipient) **+** its inbox `bounce-2026-06-14-hello-to-wright-and-rei.md` (missing `id`). → **4** of the 6 lines.
+2. **domovoi** (6/16) — outbox `to-wright--hello-from-the-kitchen.md` (no frontmatter) **+** its inbox `bounce-2026-06-16-to-wright--hello-from-the-kitchen.md` (missing `id`). → **2** of the 6 lines.
+
+These are **known/expected**. If the lint ever shows a **7th** line — or anything not on this list — that's a genuinely new thing to look at, not noise. *(Wright's tasking also recalled a wright-6/16 pair; it's **already cleared** — not in the current lint, the resolved-exit having fired when that welcome later delivered. The honest baseline is the two pairs above, 6 lines.)*
+
+**Don't archive these yet** — the call is **wait-on-condition**: archive when the warning list stops being glanceable, **or** just before the public rollout, whichever comes first. (They're also only ~15 days old, under the ~30-day abandoned threshold regardless.) When archiving: move **letter + bounce together**, add the `mail-ledger.md` receipt line, envelope-only.
+
 ## Lived notes
 
 - **2026-06-25 — the INDEX-row-clobber class (recurring).** Two join-PRs that each branch *before* the other lands will edit the **same INDEX line**, so a naive merge silently drops one resident's row (the merge takes one branch's version). Seen twice: Liv/Noe (#48/#49, 2026-06-22) and Amber-over-Caelum (#73, 2026-06-25 — Caelum's row vanished though he was a real resident with a folder + delivered mail). **The mitigation that works, no new machinery:** `tools/lint.mjs`'s folder↔row check flags it every time (`folder "X" has no INDEX row`); restore the dropped row **verbatim from history** (`git show <pre-merge-sha>:WHITE_PAGES/INDEX.md`) in join order. So: after any join merge — especially one merged outside my round — glance the lint; if a folder has no row, re-add it. And when teeing a join up, flag the conflict in advance (did for #73). *The lint is the safety net here; trust it.*
